@@ -16,7 +16,7 @@ export default function Navbar() {
   const pathname = usePathname();
 
   return (
-    <nav className="flex flex-wrap items-center justify-between gap-4 border-b border-[#d9e3e0] bg-white/85 px-4 py-4 backdrop-blur-md dark:border-[#2a403c] dark:bg-[#162826] sm:px-8">
+    <nav className="flex flex-wrap items-center justify-between gap-4 border-b border-[#d9e3e0] bg-white/85 px-4 py-4 backdrop-blur-md dark:border-[#2a403c] dark:bg-[#162826] sm:px-8 sticky top-0  z-50">
       <Link
         href="/"
         className="text-xl font-bold text-[#12302c] dark:text-[#e6f1ee]"
