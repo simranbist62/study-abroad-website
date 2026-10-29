@@ -1,0 +1,202 @@
+{
+  "faqs": [
+    {
+      "id": 1,
+      "q": "When should I start applying?",
+      "a": "Ideally 10-12 months before your intake."
+    },
+    {
+      "id": 2,
+      "q": "Do you charge for the first counselling session?",
+      "a": "No. The first session is free."
+    },
+    {
+      "id": 3,
+      "q": "Can I work while studying?",
+      "a": "Most countries allow part-time work. Limits depend on the country and visa."
+    },
+    {
+      "id": 4,
+      "q": "Which English test do I need?",
+      "a": "It depends on the university. Most accept IELTS, TOEFL or PTE."
+    },
+    {
+      "id": 5,
+      "q": "How much money do I need to show for a visa?",
+      "a": "Usually the first year's tuition plus living costs. We will give you the exact figure for your country."
+    },
+    {
+      "id": 6,
+      "q": "Can I apply with a low GPA?",
+      "a": "Yes, many universities look at the whole profile. We can suggest options that suit your results."
+    }
+  ],
+  "destinations": [
+    {
+      "id": 1,
+      "name": "United Kingdom",
+      "tagline": "Shorter degrees, world-ranked universities",
+      "tuition": "£12,000-£26,000 per year",
+      "image": "",
+      "desc": "One-year master's degrees, a two-year Graduate Route work visa and a strong research culture make the UK a popular pick.",
+      "intakes": ["January", "May", "September"],
+      "popularCourses": ["Business", "Computer Science", "Law", "Nursing"]
+    },
+    {
+      "id": 2,
+      "name": "Canada",
+      "tagline": "Study, work and settle",
+      "tuition": "CAD 15,000-35,000 per year",
+      "image": "",
+      "desc": "Post-study work permits and clear pathways to permanent residence attract students who plan to build a career abroad.",
+      "intakes": ["January", "May", "September"],
+      "popularCourses": ["Engineering", "Health Sciences", "IT", "Hospitality"]
+    },
+    {
+      "id": 3,
+      "name": "Australia",
+      "tagline": "Practical learning, great climate",
+      "tuition": "AUD 20,000-45,000 per year",
+      "image": "",
+      "desc": "Industry placements and part-time work rights help students earn while they learn.",
+      "intakes": ["February", "July", "November"],
+      "popularCourses": ["Nursing", "Accounting", "Engineering", "Data Science"]
+    },
+    {
+      "id": 4,
+      "name": "United States",
+      "tagline": "Widest choice of programs",
+      "tuition": "USD 20,000-55,000 per year",
+      "image": "",
+      "desc": "Flexible majors, scholarships and OPT work training offer unmatched variety.",
+      "intakes": ["January", "August"],
+      "popularCourses": ["Computer Science", "MBA", "Biotechnology", "Design"]
+    },
+    {
+      "id": 5,
+      "name": "Germany",
+      "tagline": "Low tuition, strong engineering",
+      "tuition": "€0-€3,000 per year",
+      "image": "",
+      "desc": "Public universities charge little or no tuition, and many English-taught master’s programs are available.",
+      "intakes": ["April", "October"],
+      "popularCourses": [
+        "Mechanical Engineering",
+        "Automotive",
+        "Renewable Energy",
+        "Physics"
+      ]
+    }
+  ],
+  "services": [
+    {
+      "id": 1,
+      "title": "Career counselling",
+      "icon": "compass",
+      "desc": "One-to-one sessions to match your goals and budget with the right country and course."
+    },
+    {
+      "id": 2,
+      "title": "University shortlisting",
+      "icon": "school",
+      "desc": "A realistic list of safe, target and reach universities."
+    },
+    {
+      "id": 3,
+      "title": "Application support",
+      "icon": "file-text",
+      "desc": "Statements of purpose, recommendation letters and document checks."
+    },
+    {
+      "id": 4,
+      "title": "Visa guidance",
+      "icon": "passport",
+      "desc": "Step-by-step help with forms, funds proof and interview preparation."
+    },
+    {
+      "id": 5,
+      "title": "Test preparation",
+      "icon": "pencil",
+      "desc": "IELTS, TOEFL, PTE and GRE classes with mock tests."
+    }
+  ],
+  "testimonials": [
+    {
+      "id": 1,
+      "name": "Anisha Gurung",
+      "destination": "Canada",
+      "course": "MSc Health Informatics",
+      "quote": "They sorted my documents in two weeks and my visa came through first time."
+    },
+    {
+      "id": 2,
+      "name": "Rohan Thapa",
+      "destination": "United Kingdom",
+      "course": "MSc Finance",
+      "quote": "The counsellor was honest about costs, which helped me choose a course I could afford."
+    },
+    {
+      "id": 3,
+      "name": "Sabina Karki",
+      "destination": "Germany",
+      "course": "MSc Mechanical Engineering",
+      "quote": "I never thought a German master’s was possible for me. Now I’m in Munich."
+    },
+    {
+      "id": 4,
+      "name": "Prakash Adhikari",
+      "destination": "Australia",
+      "course": "Bachelor of Nursing",
+      "quote": "Their visa interview practice made me calm and confident on the day."
+    },
+    {
+      "id": 5,
+      "name": "Nisha Rana",
+      "destination": "United States",
+      "course": "MS Computer Science",
+      "quote": "I received a partial scholarship after they helped me rewrite my statement of purpose."
+    }
+  ],
+  "blog": [
+    {
+      "id": 1,
+      "title": "How to write a strong statement of purpose",
+      "excerpt": "A clear structure that admissions officers like to read.",
+      "author": "Sita Sharma",
+      "date": "2026-09-12",
+      "body": "Start with a specific moment that led you to your subject. Explain what you have done since, why this course fits, and what you will do after graduating. Keep it to one page and avoid repeating your CV."
+    },
+    {
+      "id": 2,
+      "title": "Budgeting for your first year abroad",
+      "excerpt": "Tuition is only part of the cost.",
+      "author": "Bikash Poudel",
+      "date": "2026-09-26",
+      "body": "Add tuition, rent, food, transport, health cover and a small emergency fund. Check each university’s cost-of-living estimate and compare it to your funds proof."
+    },
+    {
+      "id": 3,
+      "title": "IELTS or PTE: which should you take?",
+      "excerpt": "Both are widely accepted. Here is how to choose.",
+      "author": "Sita Sharma",
+      "date": "2026-10-03",
+      "body": "IELTS has a human speaking examiner, while PTE is fully computer-scored with faster results. Check your target university’s accepted tests first, then pick the format that suits you."
+    },
+    {
+      "id": 4,
+      "title": "Scholarships you can apply for this year",
+      "excerpt": "Where to look and when to apply.",
+      "author": "Bikash Poudel",
+      "date": "2026-10-10",
+      "body": "Start with the scholarship pages of your chosen universities, then check government programs such as Chevening and DAAD. Deadlines are often months before the application deadline, so plan early."
+    },
+    {
+      "id": 5,
+      "title": "Your visa interview: what to expect",
+      "excerpt": "Common questions and how to prepare.",
+      "author": "Sita Sharma",
+      "date": "2026-10-18",
+      "body": "Officers want to confirm that you are a genuine student with a clear plan and enough funds. Know your course, your university and your finances, and answer briefly and honestly."
+    }
+  ]
+}
