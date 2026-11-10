@@ -37,7 +37,7 @@
       "name": "United Kingdom",
       "tagline": "Shorter degrees, world-ranked universities",
       "tuition": "£12,000-£26,000 per year",
-      "image": "",
+      "image": "/images/united_kingdom.jpg",
       "desc": "One-year master's degrees, a two-year Graduate Route work visa and a strong research culture make the UK a popular pick.",
       "intakes": ["January", "May", "September"],
       "popularCourses": ["Business", "Computer Science", "Law", "Nursing"]
@@ -47,7 +47,7 @@
       "name": "Canada",
       "tagline": "Study, work and settle",
       "tuition": "CAD 15,000-35,000 per year",
-      "image": "",
+      "image": "/images/canada.webp",
       "desc": "Post-study work permits and clear pathways to permanent residence attract students who plan to build a career abroad.",
       "intakes": ["January", "May", "September"],
       "popularCourses": ["Engineering", "Health Sciences", "IT", "Hospitality"]
@@ -57,8 +57,8 @@
       "name": "Australia",
       "tagline": "Practical learning, great climate",
       "tuition": "AUD 20,000-45,000 per year",
-      "image": "",
-      "desc": "Industry placements and part-time work rights help students earn while they learn.",
+      "image": "/images/australia.webp",
+      "desc": "3-years Bachelors Degree Industry placements and part-time work rights help students earn while they learn.",
       "intakes": ["February", "July", "November"],
       "popularCourses": ["Nursing", "Accounting", "Engineering", "Data Science"]
     },
@@ -67,7 +67,7 @@
       "name": "United States",
       "tagline": "Widest choice of programs",
       "tuition": "USD 20,000-55,000 per year",
-      "image": "",
+      "image": "/images/US.jpg",
       "desc": "Flexible majors, scholarships and OPT work training offer unmatched variety.",
       "intakes": ["January", "August"],
       "popularCourses": ["Computer Science", "MBA", "Biotechnology", "Design"]
@@ -77,7 +77,7 @@
       "name": "Germany",
       "tagline": "Low tuition, strong engineering",
       "tuition": "€0-€3,000 per year",
-      "image": "",
+      "image": "/images/germany.jpg",
       "desc": "Public universities charge little or no tuition, and many English-taught master’s programs are available.",
       "intakes": ["April", "October"],
       "popularCourses": [

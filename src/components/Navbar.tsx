@@ -3,7 +3,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const links = [
-  { name: "Home", href: "/" },
+  { name: "Home", href: "/home" },
   { name: "About", href: "/about" },
   { name: "Services", href: "/services" },
   { name: "Destinations", href: "/destinations" },
@@ -18,7 +18,7 @@ export default function Navbar() {
   return (
     <nav className="flex flex-wrap items-center justify-between gap-4 border-b border-[#d9e3e0] bg-white/85 px-4 py-4 backdrop-blur-md dark:border-[#2a403c] dark:bg-[#162826] sm:px-8 sticky top-0  z-50">
       <Link
-        href="/"
+        href="/home"
         className="text-xl font-bold text-[#12302c] dark:text-[#e6f1ee]"
       >
         Northbound
