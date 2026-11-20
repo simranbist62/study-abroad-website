@@ -32,7 +32,7 @@ export default function Destinations() {
 
       {/* Cards */}
       <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-        {destinations.map((destination) => (
+        {destinations.slice(0, 3).map((destination) => (
           <DestinationCard key={destination.id} destination={destination} />
         ))}
       </div>

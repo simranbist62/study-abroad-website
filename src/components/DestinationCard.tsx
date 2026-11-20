@@ -17,7 +17,7 @@ export default function DestinationCard({
       whileHover={{ y: -8 }}
     >
       <Link
-        href={`/destination/${destination.id}`}
+        href={`/destinations/${destination.id}`}
         className="block overflow-hidden rounded-2xl border border-[#2a403c] bg-[#162826]"
       >
         <div className="relative h-40 w-full overflow-hidden">

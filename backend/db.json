@@ -1,39 +1,39 @@
 {
   "faqs": [
     {
-      "id": 1,
+      "id": "1",
       "q": "When should I start applying?",
       "a": "Ideally 10-12 months before your intake."
     },
     {
-      "id": 2,
+      "id": "2",
       "q": "Do you charge for the first counselling session?",
       "a": "No. The first session is free."
     },
     {
-      "id": 3,
+      "id": "3",
       "q": "Can I work while studying?",
       "a": "Most countries allow part-time work. Limits depend on the country and visa."
     },
     {
-      "id": 4,
+      "id": "4",
       "q": "Which English test do I need?",
       "a": "It depends on the university. Most accept IELTS, TOEFL or PTE."
     },
     {
-      "id": 5,
+      "id": "5",
       "q": "How much money do I need to show for a visa?",
       "a": "Usually the first year's tuition plus living costs. We will give you the exact figure for your country."
     },
     {
-      "id": 6,
+      "id": "6",
       "q": "Can I apply with a low GPA?",
       "a": "Yes, many universities look at the whole profile. We can suggest options that suit your results."
     }
   ],
   "destinations": [
     {
-      "id": 1,
+      "id": "1",
       "name": "United Kingdom",
       "tagline": "Shorter degrees, world-ranked universities",
       "tuition": "£12,000-£26,000 per year",
@@ -43,7 +43,7 @@
       "popularCourses": ["Business", "Computer Science", "Law", "Nursing"]
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Canada",
       "tagline": "Study, work and settle",
       "tuition": "CAD 15,000-35,000 per year",
@@ -53,7 +53,7 @@
       "popularCourses": ["Engineering", "Health Sciences", "IT", "Hospitality"]
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "Australia",
       "tagline": "Practical learning, great climate",
       "tuition": "AUD 20,000-45,000 per year",
@@ -63,7 +63,7 @@
       "popularCourses": ["Nursing", "Accounting", "Engineering", "Data Science"]
     },
     {
-      "id": 4,
+      "id": "4",
       "name": "United States",
       "tagline": "Widest choice of programs",
       "tuition": "USD 20,000-55,000 per year",
@@ -73,7 +73,7 @@
       "popularCourses": ["Computer Science", "MBA", "Biotechnology", "Design"]
     },
     {
-      "id": 5,
+      "id": "5",
       "name": "Germany",
       "tagline": "Low tuition, strong engineering",
       "tuition": "€0-€3,000 per year",
@@ -90,31 +90,31 @@
   ],
   "services": [
     {
-      "id": 1,
+      "id": "1",
       "title": "Career counselling",
       "icon": "compass",
       "desc": "One-to-one sessions to match your goals and budget with the right country and course."
     },
     {
-      "id": 2,
+      "id": "2",
       "title": "University shortlisting",
       "icon": "school",
       "desc": "A realistic list of safe, target and reach universities."
     },
     {
-      "id": 3,
+      "id": "3",
       "title": "Application support",
       "icon": "file-text",
       "desc": "Statements of purpose, recommendation letters and document checks."
     },
     {
-      "id": 4,
+      "id": "4",
       "title": "Visa guidance",
       "icon": "passport",
       "desc": "Step-by-step help with forms, funds proof and interview preparation."
     },
     {
-      "id": 5,
+      "id": "5",
       "title": "Test preparation",
       "icon": "pencil",
       "desc": "IELTS, TOEFL, PTE and GRE classes with mock tests."
@@ -122,35 +122,35 @@
   ],
   "testimonials": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Anisha Gurung",
       "destination": "Canada",
       "course": "MSc Health Informatics",
       "quote": "They sorted my documents in two weeks and my visa came through first time."
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Rohan Thapa",
       "destination": "United Kingdom",
       "course": "MSc Finance",
       "quote": "The counsellor was honest about costs, which helped me choose a course I could afford."
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "Sabina Karki",
       "destination": "Germany",
       "course": "MSc Mechanical Engineering",
       "quote": "I never thought a German master’s was possible for me. Now I’m in Munich."
     },
     {
-      "id": 4,
+      "id": "4",
       "name": "Prakash Adhikari",
       "destination": "Australia",
       "course": "Bachelor of Nursing",
       "quote": "Their visa interview practice made me calm and confident on the day."
     },
     {
-      "id": 5,
+      "id": "5",
       "name": "Nisha Rana",
       "destination": "United States",
       "course": "MS Computer Science",
@@ -159,44 +159,58 @@
   ],
   "blog": [
     {
-      "id": 1,
+      "id": "1",
       "title": "How to write a strong statement of purpose",
       "excerpt": "A clear structure that admissions officers like to read.",
       "author": "Sita Sharma",
       "date": "2026-09-12",
-      "body": "Start with a specific moment that led you to your subject. Explain what you have done since, why this course fits, and what you will do after graduating. Keep it to one page and avoid repeating your CV."
+      "body": "Writing a strong Statement of Purpose (SOP) is one of the most important parts of your university application. Start with a meaningful experience, personal interest, or academic moment that inspired you to choose your field of study. Explain your educational background, relevant projects, work experience, and the skills you have developed over time. Make sure to describe why you have selected a particular university and how its course structure, teaching approach, and facilities align with your academic goals. Admissions officers want to understand your motivation, so avoid generic statements and focus on your genuine reasons for applying. You should also explain your future career plans and how completing the program will help you achieve them. Keep your writing clear, organized, and professional. Avoid repeating information directly from your CV, using complicated vocabulary unnecessarily, or including achievements that are not relevant to your chosen course. Before submitting your SOP, proofread it carefully to correct grammatical mistakes and ensure that your story flows naturally."
     },
     {
-      "id": 2,
+      "id": "2",
       "title": "Budgeting for your first year abroad",
       "excerpt": "Tuition is only part of the cost.",
       "author": "Bikash Poudel",
       "date": "2026-09-26",
-      "body": "Add tuition, rent, food, transport, health cover and a small emergency fund. Check each university’s cost-of-living estimate and compare it to your funds proof."
+      "body": "Planning your finances is an essential step before moving abroad for higher education. Many international students focus only on tuition fees and forget about the additional expenses involved in living in another country. Your budget should include accommodation, groceries, transportation, electricity, internet, health insurance, study materials, and personal expenses. It is also important to keep an emergency fund for unexpected situations such as medical expenses, travel changes, or sudden increases in living costs. Before choosing a university, research the average cost of living in its city because expenses can vary significantly between locations. Consider whether you will live in university accommodation, shared housing, or a private apartment, as each option has different costs. You should also understand the financial documentation required for your student visa application and ensure that your available funds meet the relevant requirements. Part-time employment may help cover some living expenses, but you should not depend entirely on it to finance your education. Creating a realistic monthly budget before departure will help you manage your money responsibly and enjoy a more comfortable student experience abroad."
     },
     {
-      "id": 3,
+      "id": "3",
       "title": "IELTS or PTE: which should you take?",
       "excerpt": "Both are widely accepted. Here is how to choose.",
       "author": "Sita Sharma",
       "date": "2026-10-03",
-      "body": "IELTS has a human speaking examiner, while PTE is fully computer-scored with faster results. Check your target university’s accepted tests first, then pick the format that suits you."
+      "body": "Choosing between IELTS and PTE is an important decision for students planning to study abroad. Both English proficiency tests are widely recognized by many universities and institutions, but they differ in their examination formats, scoring systems, and overall test experience. IELTS assesses listening, reading, writing, and speaking, with the speaking section usually conducted through a face-to-face or video-call interview with an examiner. PTE Academic, on the other hand, is a computer-based examination in which responses are recorded and assessed using automated scoring technology alongside other assessment processes. IELTS may be suitable for students who feel comfortable communicating with a human examiner, while PTE can be a good option for those who prefer completing the entire examination on a computer. Preparation is important for both tests, and students should become familiar with the question formats, time limits, and scoring criteria before booking their examination. Most importantly, check the English language requirements of your preferred universities and visa authorities before making a decision. Compare the required scores, available test dates, examination fees, and result timelines to select the option that best matches your needs and application schedule."
     },
     {
-      "id": 4,
+      "id": "4",
       "title": "Scholarships you can apply for this year",
       "excerpt": "Where to look and when to apply.",
       "author": "Bikash Poudel",
       "date": "2026-10-10",
-      "body": "Start with the scholarship pages of your chosen universities, then check government programs such as Chevening and DAAD. Deadlines are often months before the application deadline, so plan early."
+      "body": "Scholarships can significantly reduce the financial burden of studying abroad and make international education more accessible to deserving students. Many universities, governments, and private organizations offer financial assistance to international students based on academic performance, leadership experience, financial need, or specific areas of study. Some scholarships cover full tuition fees, while others provide partial fee reductions, accommodation support, or monthly living allowances. Students should begin researching scholarship opportunities well before their intended intake because application deadlines can fall several months before university admission deadlines. Start by visiting the official scholarship pages of your preferred universities and reviewing their eligibility criteria, required documents, and application procedures. You can also explore well-known international scholarship programs such as Chevening in the United Kingdom and DAAD opportunities in Germany. Depending on the program, applicants may need academic transcripts, recommendation letters, a Statement of Purpose, proof of English proficiency, and evidence of extracurricular activities or professional experience. Do not apply without carefully checking the scholarship requirements, as eligibility conditions can vary considerably. Preparing your documents early, maintaining strong academic results, and writing a convincing application can improve your chances of receiving financial support."
     },
     {
-      "id": 5,
+      "id": "5",
       "title": "Your visa interview: what to expect",
       "excerpt": "Common questions and how to prepare.",
       "author": "Sita Sharma",
       "date": "2026-10-18",
-      "body": "Officers want to confirm that you are a genuine student with a clear plan and enough funds. Know your course, your university and your finances, and answer briefly and honestly."
+      "body": "A student visa interview is an important part of the international study application process for destinations where an interview is required. During the interview, visa officers may ask questions to understand your academic background, study intentions, financial situation, and plans after completing your education. Common questions include why you selected a particular country, university, and course, how the program relates to your previous studies, and how you intend to finance your education and living expenses. Before attending the interview, carefully research your university, course modules, tuition fees, accommodation arrangements, and available facilities. You should also understand your financial documents and be prepared to explain who is sponsoring your education and how the expenses will be covered. Practice answering common questions in a natural and confident manner, but avoid memorizing lengthy responses because they may sound unnatural. Always provide honest and consistent information that matches the documents submitted with your application. Dress professionally, arrive on time, listen carefully to each question, and answer clearly without providing unnecessary details. Remember that visa requirements and interview procedures differ between countries, so always check the latest official immigration guidelines for your intended destination."
     }
-  ]
+  ],
+  "enquiries": [
+    {
+      "name": "Simran Bist",
+      "email": "seemranbist@gmail.com",
+      "phone": "9868564672",
+      "country": "United Kingdom",
+      "message": "Hi i want to know the student visa process for UK",
+      "status": "New",
+      "note": "",
+      "date": "2026-11-20",
+      "id": "GLLEPeR7FcY"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }
