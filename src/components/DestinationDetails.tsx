@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { useParams } from "next/navigation";
+import axios from "axios";
 import { motion } from "motion/react";
 import {
   ArrowLeft,
@@ -14,11 +15,13 @@ import {
 } from "lucide-react";
 import { Destination } from "@/lib/api";
 import { api } from "@/lib/axios";
+import CollectionState from "./CollectionState";
 
 export default function DestinationDetails() {
   const { id } = useParams<{ id: string }>();
   const [destination, setDestination] = useState<Destination | null>(null);
   const [error, setError] = useState("");
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     async function getDestination() {
@@ -27,7 +30,9 @@ export default function DestinationDetails() {
         setDestination(response.data);
       } catch (error) {
         console.error("Error fetching destination", error);
-        setError("Destination not found.");
+        setError(axios.isAxiosError(error) && !error.response ? "Could not reach the data server. Start the site with npm run dev." : "Destination not found.");
+      } finally {
+        setLoading(false);
       }
     }
     getDestination();
@@ -42,7 +47,7 @@ export default function DestinationDetails() {
         <ArrowLeft size={18} /> Back to destinations
       </Link>
 
-      {error && <p className="text-red-300">{error}</p>}
+      {(loading || error || !destination) && <CollectionState loading={loading} error={error} empty="Destination not found." />}
 
       {destination && (
         <motion.div
@@ -139,7 +144,7 @@ export default function DestinationDetails() {
             whileTap={{ scale: 0.97 }}
           >
             <Link
-              href="/book-counseling"
+              href="/book"
               className="inline-flex items-center gap-2 rounded-lg bg-gradient-to-br from-[#e8a33d] to-[#f2c36b] px-6 py-3 font-semibold text-[#2b1c00]"
             >
               Book counselling for {destination.name} <ArrowRight size={18} />

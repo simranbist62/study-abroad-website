@@ -1,25 +1,13 @@
 "use client";
 
-import { useState, useEffect } from "react";
 import { Service } from "@/lib/api";
-import { api } from "@/lib/axios";
+import { useCollection } from "@/lib/useCollection";
 import ServiceCard from "./ServiceCard";
 import Link from "next/link";
+import CollectionState from "./CollectionState";
 
 export default function Services() {
-  const [services, setServices] = useState<Service[]>([]);
-
-  useEffect(() => {
-    async function getServices() {
-      try {
-        const response = await api.get("/services");
-        setServices(response.data);
-      } catch (error) {
-        console.error("Error fetching services", error);
-      }
-    }
-    getServices();
-  }, []);
+  const { data: services, loading, error } = useCollection<Service>("services");
 
   return (
     <section className="mx-auto max-w-[1200px] px-4 py-6 sm:px-8">
@@ -30,11 +18,11 @@ export default function Services() {
       </div>
 
       {/* Cards */}
-      <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+      {loading || error || services.length === 0 ? <CollectionState loading={loading} error={error} empty="No services have been added yet." /> : <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {services.slice(0, 3).map((service) => (
           <ServiceCard key={service.id} service={service} />
         ))}
-      </div>
+      </div>}
       <Link
         href="/services"
         className="mt-6 inline-block text-teal-400 hover:underline"

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import UIProvider from "@/components/UIProvider";
+import SiteFrame from "@/components/SiteFrame";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -13,7 +14,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en" data-scroll-behavior="smooth">
-      <body><UIProvider>{children}</UIProvider></body>
+      <body><UIProvider><SiteFrame>{children}</SiteFrame></UIProvider></body>
     </html>
   );
 }

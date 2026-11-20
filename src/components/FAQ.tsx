@@ -1,26 +1,15 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { ChevronDown } from "lucide-react";
 import { Faq } from "@/lib/api";
-import { api } from "@/lib/axios";
+import { useCollection } from "@/lib/useCollection";
+import CollectionState from "./CollectionState";
 
 export default function FAQ() {
-  const [faqs, setFaqs] = useState<Faq[]>([]);
+  const { data: faqs, loading, error } = useCollection<Faq>("faqs");
   const [openId, setOpenId] = useState<number | string | null>(null);
-
-  useEffect(() => {
-    async function getFaqs() {
-      try {
-        const response = await api.get("/faqs");
-        setFaqs(response.data);
-      } catch (error) {
-        console.error("Error fetching faqs", error);
-      }
-    }
-    getFaqs();
-  }, []);
 
   return (
     <section className="mx-auto max-w-[1200px] px-4 py-8 sm:px-8">
@@ -33,7 +22,7 @@ export default function FAQ() {
       </div>
 
       {/* Questions */}
-      <div className="space-y-3">
+      {loading || error || faqs.length === 0 ? <CollectionState loading={loading} error={error} empty="No frequently asked questions have been added yet." /> : <div className="space-y-3">
         {faqs.slice(0, 3).map((faq) => (
           <div
             key={faq.id}
@@ -67,7 +56,7 @@ export default function FAQ() {
             </AnimatePresence>
           </div>
         ))}
-      </div>
+      </div>}
     </section>
   );
 }

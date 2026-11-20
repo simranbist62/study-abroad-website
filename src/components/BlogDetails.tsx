@@ -3,15 +3,18 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { useParams } from "next/navigation";
+import axios from "axios";
 import { motion } from "motion/react";
 import { ArrowLeft, Calendar, User } from "lucide-react";
 import { Blog } from "@/lib/api";
 import { api } from "@/lib/axios";
+import CollectionState from "./CollectionState";
 
 export default function BlogDetails() {
   const { id } = useParams<{ id: string }>();
   const [blog, setBlog] = useState<Blog | null>(null);
   const [error, setError] = useState("");
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     async function getBlog() {
@@ -20,7 +23,9 @@ export default function BlogDetails() {
         setBlog(response.data);
       } catch (error) {
         console.error("Error fetching blog post", error);
-        setError("Article not found.");
+        setError(axios.isAxiosError(error) && !error.response ? "Could not reach the data server. Start the site with npm run dev." : "Article not found.");
+      } finally {
+        setLoading(false);
       }
     }
     getBlog();
@@ -43,7 +48,7 @@ export default function BlogDetails() {
         <ArrowLeft size={18} /> Back to blog
       </Link>
 
-      {error && <p className="text-red-300">{error}</p>}
+      {(loading || error || !blog) && <CollectionState loading={loading} error={error} empty="Article not found." />}
 
       {blog && (
         <motion.article

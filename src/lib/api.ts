@@ -18,7 +18,7 @@ async function req<T>(path: string, init: RequestInit = {}): Promise<T> {
       headers: init.body ? { "Content-Type": "application/json" } : undefined,
     });
   } catch {
-    throw new ApiError("Cannot reach the server. Start it with: cd backend && npm start");
+    throw new ApiError("Cannot reach the data server. Install backend dependencies once with npm --prefix backend install, then start both servers with npm run dev.");
   }
   if (!res.ok) throw new ApiError(`Request failed (${res.status})`, res.status);
   return (res.status === 204 ? undefined : await res.json()) as T;

@@ -1,24 +1,12 @@
 "use client";
 
-import { useState, useEffect } from "react";
 import { Blog } from "@/lib/api";
-import { api } from "@/lib/axios";
+import { useCollection } from "@/lib/useCollection";
 import BlogCard from "./BlogCard";
+import CollectionState from "./CollectionState";
 
 export default function Blogs() {
-  const [blogs, setBlogs] = useState<Blog[]>([]);
-
-  useEffect(() => {
-    async function getBlogs() {
-      try {
-        const response = await api.get("/blog");
-        setBlogs(response.data);
-      } catch (error) {
-        console.error("Error fetching blog posts", error);
-      }
-    }
-    getBlogs();
-  }, []);
+  const { data: blogs, loading, error } = useCollection<Blog>("blog");
 
   return (
     <section className="mx-auto max-w-[1200px] px-4 py-10 sm:px-8">
@@ -34,11 +22,11 @@ export default function Blogs() {
       </div>
 
       {/* Cards */}
-      <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+      {loading || error || blogs.length === 0 ? <CollectionState loading={loading} error={error} empty="No articles have been published yet." /> : <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {blogs.map((blog) => (
           <BlogCard key={blog.id} blog={blog} />
         ))}
-      </div>
+      </div>}
     </section>
   );
 }

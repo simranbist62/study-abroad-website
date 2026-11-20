@@ -44,7 +44,7 @@ export default function Hero() {
           <div className="mt-6 flex flex-wrap gap-3">
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <Link
-                href="/book-counseling"
+                href="/book"
                 className="block rounded-lg bg-amber-400 px-5 py-2.5 font-semibold text-slate-950 hover:bg-amber-300"
               >
                 Book counselling

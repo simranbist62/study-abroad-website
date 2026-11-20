@@ -1,24 +1,12 @@
 "use client";
 
-import { useState, useEffect } from "react";
 import { Destination } from "@/lib/api";
-import { api } from "@/lib/axios";
+import { useCollection } from "@/lib/useCollection";
 import DestinationCard from "./DestinationCard";
+import CollectionState from "./CollectionState";
 
 export default function StudyDestination() {
-  const [destinations, setDestinations] = useState<Destination[]>([]);
-
-  useEffect(() => {
-    async function getDestinations() {
-      try {
-        const response = await api.get("/destinations");
-        setDestinations(response.data);
-      } catch (error) {
-        console.error("Error fetching destinations: ", error);
-      }
-    }
-    getDestinations();
-  }, []);
+  const { data: destinations, loading, error } = useCollection<Destination>("destinations");
   return (
     <section className="mx-auto max-w-[1200px] px-4 py-12 sm:px-8">
       {/* Section title */}
@@ -30,11 +18,11 @@ export default function StudyDestination() {
       </div>
 
       {/* Cards */}
-      <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+      {loading || error || destinations.length === 0 ? <CollectionState loading={loading} error={error} empty="No destinations have been added yet." /> : <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {destinations.map((destination) => (
           <DestinationCard key={destination.id} destination={destination} />
         ))}
-      </div>
+      </div>}
     </section>
   );
 }

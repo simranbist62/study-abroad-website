@@ -1,26 +1,14 @@
 "use client";
 
-import { useState, useEffect } from "react";
 import { Service } from "@/lib/api";
-import { api } from "@/lib/axios";
+import { useCollection } from "@/lib/useCollection";
 import ServiceCard from "./ServiceCard";
 import { motion } from "motion/react";
 import Link from "next/link";
+import CollectionState from "./CollectionState";
 
 export default function OurServices() {
-  const [services, setServices] = useState<Service[]>([]);
-
-  useEffect(() => {
-    async function getServices() {
-      try {
-        const response = await api.get("/services");
-        setServices(response.data);
-      } catch (error) {
-        console.error("Error fetching services", error);
-      }
-    }
-    getServices();
-  }, []);
+  const { data: services, loading, error } = useCollection<Service>("services");
 
   return (
     <section className="mx-auto max-w-[1200px] px-4 py-10 sm:px-8">
@@ -36,14 +24,14 @@ export default function OurServices() {
       </div>
 
       {/* Cards: all 5 services */}
-      <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+      {loading || error || services.length === 0 ? <CollectionState loading={loading} error={error} empty="No services have been added yet." /> : <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {services.map((service) => (
           <ServiceCard key={service.id} service={service} />
         ))}
-      </div>
+      </div>}
       <motion.div className="mt-8" whileTap={{ scale: 0.95 }}>
         <Link
-          href="/book-counseling"
+          href="/book"
           className="gap-2 rounded-lg bg-[#4fc3ad] px-5 py-3 font-semibold text-black"
         >
           Book counselling

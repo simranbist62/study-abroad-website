@@ -1,24 +1,12 @@
 "use client";
 
-import { useState, useEffect } from "react";
 import { Testimonial } from "@/lib/api";
-import { api } from "@/lib/axios";
+import { useCollection } from "@/lib/useCollection";
 import TestimonialCard from "./TestimonialCard";
+import CollectionState from "./CollectionState";
 
 export default function Testimonials() {
-  const [testimonials, setTestimonials] = useState<Testimonial[]>([]);
-
-  useEffect(() => {
-    async function getTestimonials() {
-      try {
-        const response = await api.get("/testimonials");
-        setTestimonials(response.data);
-      } catch (error) {
-        console.error("Error fetching testimonials", error);
-      }
-    }
-    getTestimonials();
-  }, []);
+  const { data: testimonials, loading, error } = useCollection<Testimonial>("testimonials");
 
   return (
     <section className="mx-auto max-w-[1200px] px-4 py-8 sm:px-8">
@@ -31,11 +19,11 @@ export default function Testimonials() {
       </div>
 
       {/* Cards: the home page shows the first 3 */}
-      <div className="grid gap-5 md:grid-cols-3">
+      {loading || error || testimonials.length === 0 ? <CollectionState loading={loading} error={error} empty="No student stories have been published yet." /> : <div className="grid gap-5 md:grid-cols-3">
         {testimonials.slice(0, 3).map((testimonial) => (
           <TestimonialCard key={testimonial.id} testimonial={testimonial} />
         ))}
-      </div>
+      </div>}
     </section>
   );
 }
