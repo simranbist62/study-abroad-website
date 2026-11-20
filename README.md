@@ -32,8 +32,8 @@ Open [http://localhost:3000/admin/login](http://localhost:3000/admin/login) and 
 
 ## Available pages
 
-- Public: `/`, `/enquiry`, `/book`, `/privacy`, `/terms`
-- Admin: `/admin/login`, `/admin`, `/admin/enquiries`, `/admin/appointments`, `/admin/pipeline`, `/admin/calendar`, `/admin/content`, `/admin/reports`, `/admin/activity`, `/admin/settings`
+- Public: `/`, `/home`, `/about`, `/services`, `/destinations`, `/destinations/[id]`, `/success-stories`, `/blog`, `/blog/[id]`, `/contact`, `/enquiry`, `/book`, `/privacy`, `/terms`
+- Admin: `/admin/login`, `/admin`, `/admin/enquiries`, `/admin/appointments`, `/admin/pipeline`, `/admin/calendar`, `/admin/content`, `/admin/content/[collection]`, `/admin/content/[collection]/[id]`, `/admin/reports`, `/admin/activity`, `/admin/settings`
 
 ## Checks
 

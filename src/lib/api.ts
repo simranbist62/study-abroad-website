@@ -1,7 +1,7 @@
 import type { Activity, Appointment, Enquiry, Id, Settings } from "./types";
 import { DEFAULT_SETTINGS } from "./types";
 
-/** JSON Server base URL (backend: `cd backend && npm start` -> port 5000). Override with NEXT_PUBLIC_API_URL. */
+/** JSON Server base URL. Override with NEXT_PUBLIC_API_URL. */
 export const API_BASE = process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000";
 
 export class ApiError extends Error {
@@ -36,7 +36,6 @@ export const api = {
 const nowISO = () => new Date().toISOString();
 const dayISO = () => nowISO().slice(0, 10);
 
-/* ---------- Activity log ---------- */
 export const activityApi = {
   list: () => api.list<Activity>("activity"),
   log: (action: string, entity: string, detail: string, actor = "Admin") =>
@@ -44,7 +43,6 @@ export const activityApi = {
   remove: (id: Id) => api.remove("activity", id),
 };
 
-/* ---------- Enquiry workflow (Pratikshya) ---------- */
 export const enquiryApi = {
   list: () => api.list<Enquiry>("enquiries"),
   create: async (v: Omit<Enquiry, "id" | "status" | "note" | "date" | "createdAt">, actor = "Website") => {
@@ -56,7 +54,6 @@ export const enquiryApi = {
   remove: (id: Id) => api.remove("enquiries", id),
 };
 
-/* ---------- Booking workflow (Pratikshya) ---------- */
 export const appointmentApi = {
   list: () => api.list<Appointment>("appointments"),
   create: async (v: Omit<Appointment, "id" | "status" | "createdAt">, actor = "Website") => {
@@ -68,7 +65,6 @@ export const appointmentApi = {
   remove: (id: Id) => api.remove("appointments", id),
 };
 
-/* ---------- Settings (single record) ---------- */
 export const settingsApi = {
   get: async (): Promise<Settings> => {
     try { const l = await api.list<Settings>("settings"); return { ...DEFAULT_SETTINGS, ...(l[0] || {}) }; }
@@ -76,3 +72,13 @@ export const settingsApi = {
   },
   save: async (s: Settings) => (s.id ? api.update<Settings>("settings", s.id, s) : api.create<Settings>("settings", s)),
 };
+
+// Content types used by the public site maintained on main.
+export type Destination = {
+  id: string; name: string; tagline: string; tuition: string; image: string;
+  desc: string; intakes: string[]; popularCourses: string[];
+};
+export type Service = { id: number | string; title: string; icon: string; desc: string };
+export type Testimonial = { id: number | string; name: string; destination: string; course: string; quote: string };
+export type Faq = { id: number | string; q: string; a: string };
+export type Blog = { id: number | string; title: string; excerpt: string; author: string; date: string; body: string; image?: string };
