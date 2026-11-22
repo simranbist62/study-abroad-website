@@ -30,7 +30,11 @@ export default function DestinationDetails() {
         setDestination(response.data);
       } catch (error) {
         console.error("Error fetching destination", error);
-        setError(axios.isAxiosError(error) && !error.response ? "Could not reach the data server. Start the site with npm run dev." : "Destination not found.");
+        setError(
+          axios.isAxiosError(error) && !error.response
+            ? "Could not reach the data server. Start the site with npm run dev."
+            : "Destination not found.",
+        );
       } finally {
         setLoading(false);
       }
@@ -39,7 +43,7 @@ export default function DestinationDetails() {
   }, [id]);
 
   return (
-    <section className="mx-auto max-w-[1000px] px-4 py-10 sm:px-8">
+    <section className="mx-auto max-w-[1000px] px-4 sm:px-8">
       <Link
         href="/destinations"
         className="mb-6 inline-flex items-center gap-2 text-teal-400 hover:underline"
@@ -47,7 +51,13 @@ export default function DestinationDetails() {
         <ArrowLeft size={18} /> Back to destinations
       </Link>
 
-      {(loading || error || !destination) && <CollectionState loading={loading} error={error} empty="Destination not found." />}
+      {(loading || error || !destination) && (
+        <CollectionState
+          loading={loading}
+          error={error}
+          empty="Destination not found."
+        />
+      )}
 
       {destination && (
         <motion.div

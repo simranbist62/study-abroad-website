@@ -23,7 +23,11 @@ export default function BlogDetails() {
         setBlog(response.data);
       } catch (error) {
         console.error("Error fetching blog post", error);
-        setError(axios.isAxiosError(error) && !error.response ? "Could not reach the data server. Start the site with npm run dev." : "Article not found.");
+        setError(
+          axios.isAxiosError(error) && !error.response
+            ? "Could not reach the data server. Start the site with npm run dev."
+            : "Article not found.",
+        );
       } finally {
         setLoading(false);
       }
@@ -40,7 +44,7 @@ export default function BlogDetails() {
     : "";
 
   return (
-    <section className="mx-auto max-w-3xl px-4 py-10 sm:px-8">
+    <section className="mx-auto max-w-3xl px-4 sm:px-8">
       <Link
         href="/blog"
         className="mb-6 inline-flex items-center gap-2 text-teal-400 hover:underline"
@@ -48,7 +52,13 @@ export default function BlogDetails() {
         <ArrowLeft size={18} /> Back to blog
       </Link>
 
-      {(loading || error || !blog) && <CollectionState loading={loading} error={error} empty="Article not found." />}
+      {(loading || error || !blog) && (
+        <CollectionState
+          loading={loading}
+          error={error}
+          empty="Article not found."
+        />
+      )}
 
       {blog && (
         <motion.article
@@ -58,7 +68,6 @@ export default function BlogDetails() {
           <h1 className="font-serif text-3xl font-bold text-white sm:text-4xl">
             {blog.title}
           </h1>
-          <div className="mt-2 h-1 w-14 rounded bg-gradient-to-r from-teal-500 to-amber-400" />
 
           <div className="mt-4 flex flex-wrap gap-5 text-sm text-[#9bb3ae]">
             <span className="flex items-center gap-1">
@@ -69,7 +78,9 @@ export default function BlogDetails() {
             </span>
           </div>
 
-          <p className="mt-8 text-md leading-8 text-white/90">{blog.body}</p>
+          <p className="mt-8 text-md leading-8 text-white/90 font-serif">
+            {blog.body}
+          </p>
         </motion.article>
       )}
     </section>

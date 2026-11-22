@@ -5,7 +5,7 @@ import { motion } from "motion/react";
 
 export default function AboutHero() {
   return (
-    <section className="mx-auto max-w-[1200px] px-4 py-5 sm:px-8">
+    <section className="mx-auto max-w-[1200px] px-4 sm:px-8">
       <div className="mb-8">
         <h2 className="font-serif text-4xl font-bold text-white">About Us</h2>
         <div className="mt-2 h-1 w-14 rounded bg-gradient-to-r from-teal-500 to-amber-400" />

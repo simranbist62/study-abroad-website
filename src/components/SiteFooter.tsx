@@ -1,18 +1,26 @@
 import Link from "next/link";
 
-export default function SiteFooter({ admin = false }: { admin?: boolean }) {
+export default function SiteFooter() {
   return (
-    <>
-      <footer className="ft">
-        <div>
-          <Link href="/privacy">Privacy policy</Link>
-          <Link href="/terms">Terms of use</Link>
-          {admin ? <Link href="/admin">Admin</Link> : <Link href="/admin/login">Admin login</Link>}
-          {!admin && <Link href="/login">Student login</Link>}
-        </div>
-        <p>© 2026 Northbound Study Abroad.</p>
-      </footer>
-      {!admin && <a className="wa" href="https://wa.me/9779800000000" target="_blank" rel="noopener noreferrer">WhatsApp us</a>}
-    </>
+    <footer className="flex flex-col items-center justify-between gap-4 bg-[#0b2b2a] px-4 py-12 text-center sm:flex-row sm:px-8 sm:text-left">
+      <div className="flex flex-wrap justify-center gap-5 text-sm sm:justify-start">
+        <Link href="/privacy" className="text-[#ffd27a] hover:underline">
+          Privacy Policy
+        </Link>
+
+        <Link href="/terms" className="text-[#ffd27a] hover:underline">
+          Terms of Use
+        </Link>
+
+        <Link href="/admin" className="text-[#ffd27a] hover:underline">
+          Admin
+        </Link>
+      </div>
+
+      <p className="text-sm text-[#b8d0cb]">
+        © 2026 Northbound Study Abroad. Demo site: data is stored in your
+        browser.
+      </p>
+    </footer>
   );
 }

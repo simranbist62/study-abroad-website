@@ -1,6 +1,11 @@
 import Blogs from "@/components/Blogs";
-import CTA from "@/components/CTA";
 
 export default function Blog() {
-  return <><Blogs /><CTA /></>;
+  return (
+    <div className="min-h-screen bg-[#0e1b19]">
+      <main>
+        <Blogs />
+      </main>
+    </div>
+  );
 }

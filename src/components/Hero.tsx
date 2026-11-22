@@ -44,8 +44,8 @@ export default function Hero() {
           <div className="mt-6 flex flex-wrap gap-3">
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <Link
-                href="/book"
-                className="block rounded-lg bg-amber-400 px-5 py-2.5 font-semibold text-slate-950 hover:bg-amber-300"
+                href="/book-counseling"
+                className="block rounded-lg bg-amber-400 px-5 py-2.5 font-semibold !text-[#2b1c00] no-underline hover:!text-[#2b1c00] hover:no-underline hover:bg-amber-300"
               >
                 Book counselling
               </Link>
@@ -53,7 +53,7 @@ export default function Hero() {
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <Link
                 href="/destinations"
-                className="block rounded-lg border border-white px-5 py-2.5 font-semibold hover:bg-white hover:text-teal-950"
+                className="block rounded-lg border border-white px-5 py-2.5 font-semibold "
               >
                 Explore destinations
               </Link>

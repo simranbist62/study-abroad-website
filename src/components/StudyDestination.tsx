@@ -6,9 +6,13 @@ import DestinationCard from "./DestinationCard";
 import CollectionState from "./CollectionState";
 
 export default function StudyDestination() {
-  const { data: destinations, loading, error } = useCollection<Destination>("destinations");
+  const {
+    data: destinations,
+    loading,
+    error,
+  } = useCollection<Destination>("destinations");
   return (
-    <section className="mx-auto max-w-[1200px] px-4 py-12 sm:px-8">
+    <section className="mx-auto max-w-[1200px] px-4 sm:px-8">
       {/* Section title */}
       <div className="mb-8">
         <h2 className="font-serif text-3xl font-bold text-white">
@@ -18,11 +22,19 @@ export default function StudyDestination() {
       </div>
 
       {/* Cards */}
-      {loading || error || destinations.length === 0 ? <CollectionState loading={loading} error={error} empty="No destinations have been added yet." /> : <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-        {destinations.map((destination) => (
-          <DestinationCard key={destination.id} destination={destination} />
-        ))}
-      </div>}
+      {loading || error || destinations.length === 0 ? (
+        <CollectionState
+          loading={loading}
+          error={error}
+          empty="No destinations have been added yet."
+        />
+      ) : (
+        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {destinations.map((destination) => (
+            <DestinationCard key={destination.id} destination={destination} />
+          ))}
+        </div>
+      )}
     </section>
   );
 }

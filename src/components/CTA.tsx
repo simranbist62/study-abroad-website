@@ -17,7 +17,9 @@ export default function CTA() {
           <h2 className="font-serif text-2xl font-bold sm:text-3xl">
             Ready to start your journey?
           </h2>
-          <p className="mt-1">Your first counselling session is free.</p>
+          <p className="mt-1 font-serif">
+            Your first counselling session is free.
+          </p>
         </div>
 
         <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>

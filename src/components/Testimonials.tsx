@@ -6,10 +6,14 @@ import TestimonialCard from "./TestimonialCard";
 import CollectionState from "./CollectionState";
 
 export default function Testimonials() {
-  const { data: testimonials, loading, error } = useCollection<Testimonial>("testimonials");
+  const {
+    data: testimonials,
+    loading,
+    error,
+  } = useCollection<Testimonial>("testimonials");
 
   return (
-    <section className="mx-auto max-w-[1200px] px-4 py-8 sm:px-8">
+    <section className="mx-auto max-w-[1200px] px-4 sm:px-8">
       {/* Section title */}
       <div className="mb-8">
         <h2 className="font-serif text-3xl font-bold text-white">
@@ -19,11 +23,19 @@ export default function Testimonials() {
       </div>
 
       {/* Cards: the home page shows the first 3 */}
-      {loading || error || testimonials.length === 0 ? <CollectionState loading={loading} error={error} empty="No student stories have been published yet." /> : <div className="grid gap-5 md:grid-cols-3">
-        {testimonials.slice(0, 3).map((testimonial) => (
-          <TestimonialCard key={testimonial.id} testimonial={testimonial} />
-        ))}
-      </div>}
+      {loading || error || testimonials.length === 0 ? (
+        <CollectionState
+          loading={loading}
+          error={error}
+          empty="No student stories have been published yet."
+        />
+      ) : (
+        <div className="grid gap-5 md:grid-cols-3">
+          {testimonials.slice(0, 3).map((testimonial) => (
+            <TestimonialCard key={testimonial.id} testimonial={testimonial} />
+          ))}
+        </div>
+      )}
     </section>
   );
 }
